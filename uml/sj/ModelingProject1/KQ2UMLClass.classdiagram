@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="8eddb064-31eb-4c9c-8082-15037e6701a5" name="KQ2UMLClass" linkedPackageId="ef35e01d-0a04-44ee-b2db-482fc6f997e4" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="33d23d3d-9b1b-44d4-a0bb-7edb58adaecb" name="管理员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="33c6deea-db8c-41a6-a022-de79e9728c37" />
+        <targetEnds>
+          <association Id="87dde49e-4e9d-477c-8d48-fee5c130dab7" isDerived="false" sourceEndRoleName="管理员" targetEndRoleName="屏蔽用户发言" isLeaf="false" isAbstract="false">
+            <classMoniker Id="6b92e6ae-1d5c-4ab7-a74a-393ed3dacc0b" LastKnownName="屏蔽用户发言" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="81cccbf9-02e0-4ee5-bd02-e1b7145a6068" name="管理员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ab3d8f7d-ffb7-42a4-b032-6e53f87da781" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="92478b54-af5c-49a5-a806-310b2bcd2f8c" name="屏蔽用户发言" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4578139d-6f3f-4075-98bc-12b29946a00b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="89f3e5ff-96f0-4311-9b33-56ecdf5253a6" />
+          </association>
+          <association Id="94a70ecb-e09b-42ce-a0f3-23c19981d407" isDerived="false" sourceEndRoleName="管理员" targetEndRoleName="新建聊天室" isLeaf="false" isAbstract="false">
+            <classMoniker Id="4e95ab8f-31ed-4c5b-bedd-7c54468809cf" LastKnownName="新建聊天室" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e61a1d80-4921-4553-b3fd-860823f91c03" name="管理员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="92ff8d9c-820a-46e8-9382-75f7b76f5c37" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8d3bc1cf-8ceb-4241-a4c3-d6c2bcd4469a" name="新建聊天室" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bdbf895a-ed36-43e6-ad72-96d147fceda2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="994b9268-053d-4901-944c-d5d497592ac5" />
+          </association>
+          <association Id="a5ea7bc9-c086-42b4-ba72-02579a322197" isDerived="false" sourceEndRoleName="管理员" targetEndRoleName="查看聊天室状态" isLeaf="false" isAbstract="false">
+            <classMoniker Id="731bb08b-a162-4fcc-899a-9b47f589e4d6" LastKnownName="查看聊天室状态" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="08a163a5-f554-4105-add6-6ee36d57a195" name="管理员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0ce2c5af-51a6-4b53-a79b-488d26dc686f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="23fa8bf7-88b0-4f81-96f5-0deb6eec73c8" name="查看聊天室状态" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2169e996-2ef9-454e-94db-14ae474539a1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d723a581-f8d9-4046-aaf5-7207c0992ca7" />
+          </association>
+          <association Id="8bc39f6d-4f38-49ee-a435-b784db7efd31" isDerived="false" sourceEndRoleName="管理员" targetEndRoleName="删除聊天室" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5289b01b-e190-41f2-8274-8000e32050d3" LastKnownName="删除聊天室" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="935313a9-ce3c-4d03-9fad-c4b0a15c4b1c" name="管理员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fb2c1ae2-9295-479d-9602-72a2b637e4f2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2fe04eb0-91f1-44eb-92d7-c2c2c81e6556" name="删除聊天室" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5d753e6a-c096-4e00-a07c-6dcd0c9e23c4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="61ebc8e2-aece-414c-bf14-cd1c810599dd" />
+          </association>
+          <association Id="da1c19a4-7be5-4087-8685-d3658bca7481" isDerived="false" sourceEndRoleName="管理员" targetEndRoleName="屏蔽敏感词汇" isLeaf="false" isAbstract="false">
+            <classMoniker Id="1ced29c8-16b1-47fb-a034-620d338bae47" LastKnownName="屏蔽敏感词汇" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="db24f5af-812c-47ac-8368-36ce20e5ce14" name="管理员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="58f8cbc1-eeb7-47fb-8b98-6cd7f5f2c235" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ca07cc99-6895-4df7-bcce-28164b09b6d5" name="屏蔽敏感词汇" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="65fe5d4f-561b-4ae4-a9b3-3e3224c637c5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c30b9718-8496-4d60-82d6-928a5b2b3309" />
+          </association>
+          <association Id="961a557b-0112-4afc-af71-92182fa89dee" isDerived="false" sourceEndRoleName="管理员" targetEndRoleName="设置聊天室公告" isLeaf="false" isAbstract="false">
+            <classMoniker Id="2d918215-ce1e-43b4-bc1a-54989678acf4" LastKnownName="设置聊天室公告" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="46402b2b-381b-495b-a0eb-f51c68f537f9" name="管理员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8ea5a9e6-94b4-4ec5-beba-f40322f32078" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ad546ac3-b1a0-4e36-8bda-83b60ae4bf5f" name="设置聊天室公告" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="06f429c4-4477-4cab-9c0d-f1a3ce0aaea1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e9966630-01dc-4f71-acef-58e30eb3f740" />
+          </association>
+        </targetEnds>
+        <ownedLiterals>
+          <enumerationLiteral Id="e86103d6-4853-4f86-947f-5aaa0af35b6b" name="新建聊天室">
+            <elementDefinition Id="6614d1cf-2833-43d4-9a98-b8518b2243ee" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="d7b4a5df-c328-40d1-85f1-50e25334c902" name="屏蔽用户发言">
+            <elementDefinition Id="e1593160-de85-48a3-9a42-65b9e13634dd" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="96f4eed2-1d9d-43eb-9d21-dfbc05f80022" name="查看聊天室状态">
+            <elementDefinition Id="ca3f4cab-2c23-4609-95aa-afa2388e528e" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="53562018-d65d-4a8a-ade5-25f3ab3e57ef" name="删除聊天室">
+            <elementDefinition Id="c2c866fc-7560-4de9-b0dc-7db3ce722ccb" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="78e3721d-db4d-48e2-a064-be79633b1d08" name="屏蔽敏感词汇">
+            <elementDefinition Id="cef173ef-dbcd-494b-9373-dc04fc2e40e4" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="1e436a07-da51-4e14-b93a-b1ede857073b" name="设置聊天室公告">
+            <elementDefinition Id="d4d720c8-efc4-44fa-a933-87cf7507082f" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6b92e6ae-1d5c-4ab7-a74a-393ed3dacc0b" name="屏蔽用户发言" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ac8c67a0-9902-45dd-8e95-ac056d7cac3d" />
+        <ownedAttributesInternal>
+          <property Id="8134249f-d654-4961-aabd-60c1cbb104d0" name="屏蔽用户发言" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f28cc5a5-bb30-484f-bf19-ba20f6cd6ef7" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4e95ab8f-31ed-4c5b-bedd-7c54468809cf" name="新建聊天室" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c1ca4fa0-f074-4c8f-af0b-306ac7cbbd6b" />
+        <ownedAttributesInternal>
+          <property Id="edaae6f4-a77f-41e4-bbfb-12388c542c02" name="新建聊天室" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="28fa78f3-20f9-44da-b824-1b6d5cfb7597" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="731bb08b-a162-4fcc-899a-9b47f589e4d6" name="查看聊天室状态" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3859c060-23ac-447a-8646-112788534fbd" />
+        <ownedAttributesInternal>
+          <property Id="770e3a87-bf9e-43c2-b794-131c97218200" name="查看聊天室状态" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5293f803-8d46-4f35-94a4-b3174bbc621a" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5289b01b-e190-41f2-8274-8000e32050d3" name="删除聊天室" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="78b1a44c-df46-4b10-8332-8295ae54bcd5" />
+        <ownedAttributesInternal>
+          <property Id="4ba3eef3-f517-449f-a775-05e5347b6033" name="删除聊天室" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0f880e50-3645-4287-b06e-8479883c5890" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1ced29c8-16b1-47fb-a034-620d338bae47" name="屏蔽敏感词汇" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="76dffb99-8a0b-4090-bbd0-74debb143295" />
+        <ownedAttributesInternal>
+          <property Id="14b87175-0bdd-49af-ab17-db0e06f735fd" name="屏蔽敏感词汇" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0abeade9-9317-4441-a43b-94850886f52a" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2d918215-ce1e-43b4-bc1a-54989678acf4" name="设置聊天室公告" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2da98c3d-8c68-4167-b762-c22cd62ce0b8" />
+        <ownedAttributesInternal>
+          <property Id="215ff691-e955-4982-b4b6-f3c95e07374b" name="设置聊天室公告" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9a503419-633d-4ef6-b6e8-866a45c78727" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="ef35e01d-0a04-44ee-b2db-482fc6f997e4" name="ModelingProject1">
+    <elementDefinition Id="eae8e7bd-5d9b-466e-b502-8ef0da51658d" />
+    <profileInstances>
+      <packageHasProfileInstances Id="b27e5c91-30fe-4b6a-b204-cf3002b9730c">
+        <profileInstance Id="e2e1133c-bd83-41f9-ac22-8f869676778d" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="05daefe9-c1c9-4620-a1f2-6a48cec0ab40">
+        <profileInstance Id="02437561-07d6-4775-9f5f-7ea0ee06c352" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

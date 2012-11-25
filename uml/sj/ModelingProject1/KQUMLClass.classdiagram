@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="a0baf597-4371-430c-9fee-b91d58a7d6f4" name="KQUMLClass" linkedPackageId="c5e0c809-bfe0-4868-a512-d28b588feb30" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5e2a7d2d-0142-44e8-87f8-e4eed2879296" name="用户" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5714be05-4018-4788-9db8-48440890859b" />
+        <ownedAttributesInternal>
+          <property Id="5f3e896d-a703-4dff-8110-cb51ebadae94" name="账号" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a65a453a-57a8-4205-bb19-bd5ba7fa8f84" />
+          </property>
+          <property Id="9fcee1bd-f7d2-4d3a-932b-246af8eed729" name="密码" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6a93755b-9804-4bcd-8ae7-723bba4bb9f5" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="6eefb9d5-d14f-4f14-be9a-8faae3c5b62d" name="普通用户登陆" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a38b313d-fd12-443e-af8e-659ac9d2e6a8" />
+          </operation>
+          <operation Id="f219c48b-685e-4359-9c59-b2a29bb467e4" name="匿名用户登录" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fb7eddef-a4db-49a3-8698-123bd607886e" />
+          </operation>
+          <operation Id="fba36e4b-f714-40ad-af9d-626230012b99" name="VIP用户登陆" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e4bb185e-28bf-42a9-90df-33d17898ff37" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="70d29e91-f4ce-4d20-8328-f7cdd88d0eb2" name="管理员" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ab740fbd-cd90-4037-84c3-b59f6351981a" />
+        <ownedAttributesInternal>
+          <property Id="f2d52c6a-d9ca-4ecb-a52e-45f6f148a6c0" name="账号" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="87d2cc37-b48b-4568-8c60-1b2f50c9b348" />
+          </property>
+          <property Id="69eb1d9b-5a30-4fbf-86a3-62e66d45f48c" name="密码" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9004be60-f225-4a41-b77b-619c8503af16" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="354d65f7-9bd5-4412-a4c9-7e6f5ee115bd" name="管理员登陆" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b1a5b591-8ae2-4085-a4d2-42df86492cfc" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="c5e0c809-bfe0-4868-a512-d28b588feb30" name="ModelingProject1">
+    <elementDefinition Id="eae8e7bd-5d9b-466e-b502-8ef0da51658d" />
+    <profileInstances>
+      <packageHasProfileInstances Id="65a04dd8-48a6-48d1-9b3f-115c42a16e72">
+        <profileInstance Id="1e0a31c7-b024-4d88-8dd2-d328effe65e7" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="76ce2b4e-1f2c-48cb-9e41-4fe1adbf1ab5">
+        <profileInstance Id="c0541eb3-a48f-4528-9353-b314f70063bb" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

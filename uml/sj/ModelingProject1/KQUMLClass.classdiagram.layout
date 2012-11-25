@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="KQUMLClass">
+  <logicalClassDesignerModelMoniker Id="a0baf597-4371-430c-9fee-b91d58a7d6f4" />
+  <nestedChildShapes>
+    <classShape Id="e6754ee8-9342-4ad7-9be7-2c7c92308cf0" absoluteBounds="0.625, 0.875, 2.625, 1.8372395833333335" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="5e2a7d2d-0142-44e8-87f8-e4eed2879296" LastKnownName="用户" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="7067050c-ceeb-423a-9fe3-941870f4efc1" absoluteBounds="0.64, 1.2650000000000001, 2.5949999999999998, 0.58015950520833326" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="1eb4afe4-5b53-4fe7-a427-df994cd3fdf8" absoluteBounds="0.64, 1.8551595052083334, 2.5949999999999998, 0.757080078125" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="78c5bbcd-8600-4feb-be5f-7242edd8d655" absoluteBounds="3.5, 0.875, 2.625, 1.4833984375" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="70d29e91-f4ce-4d20-8328-f7cdd88d0eb2" LastKnownName="管理员" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="c010b5b2-5c8a-4d08-9cc1-95a49608835d" absoluteBounds="3.515, 1.2650000000000001, 2.5949999999999998, 0.58015950520833326" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="23d90e39-6874-4b3c-adf4-69cad5d99112" absoluteBounds="3.515, 1.8551595052083334, 2.5949999999999998, 0.40323893229166663" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

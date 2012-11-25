@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="5e012e5b-a875-4ec3-8bac-49ca31d68942" name="KQUMLUseCase" linkedPackageId="7822f760-1041-4321-ae07-6dbe85b0fc57" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="053a85f2-aeae-41c9-8bf5-ecfd6a4e08f5" name="用户" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c5be58f7-928a-498c-9f65-07d2fe25ef87" />
+        <targetEnds>
+          <association Id="c1a24111-8745-4844-a442-11bbe07b77b3" isDerived="false" sourceEndRoleName="Actor1" targetEndRoleName="查询学生基本信息" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1b9cdf5a-4c7e-4a48-aa2a-9f5a254c5246" LastKnownName="查询资料" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dc21629c-b40f-4ece-b193-c16a931e97e5" name="Actor1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="dbb826e9-e4a1-46e6-8f3d-66f7be3c4c9c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b0bb3a46-2a3f-4349-a4e3-7f73bf48b9bc" name="查询学生基本信息" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="79e44af4-98c1-4feb-9c6f-439c944934ce" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="06d9d197-9e84-418f-925f-d656a4ccf14b" />
+          </association>
+          <association Id="84370add-721b-42ae-bdd7-6e05d89e4c8f" isDerived="false" sourceEndRoleName="学生" targetEndRoleName="修改密码" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9b9f3621-ddf4-45f8-8f82-307233aa3702" LastKnownName="修改密码" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ad30eb99-0c33-4985-913b-b2c17d26e28a" name="学生" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="04724a49-a0a4-4ccd-8fa8-38b5d5db2590" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="eea15b1f-84f9-457f-8563-b0f8e123b4c2" name="修改密码" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="61e1a255-ffa4-45c9-852e-b4ecbeaa01dc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="42bf5539-f79b-41d5-abaa-58147a40661f" />
+          </association>
+          <association Id="92ba8e03-0d3a-44da-915d-30499b318436" isDerived="false" sourceEndRoleName="学生" targetEndRoleName="请假" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d69abd7e-e69e-4d45-bf57-99d7e277d95a" LastKnownName="修改邮箱" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e8c9549d-bea6-4f4d-a24c-82dd569eb2af" name="学生" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6a738393-fd8e-4c87-a545-72d71b4989f8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d9e661e5-d9c8-4529-83b9-67b8907d2fad" name="请假" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1404d9fd-5df4-4f68-a362-faf6b79d4ead" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4bfca320-d3d1-472f-80a6-ad0249b6b082" />
+          </association>
+          <association Id="ce873a0c-7e42-40fd-a4b9-bb27f54d5264" isDerived="false" sourceEndRoleName="学生" targetEndRoleName="头像处理" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="fd4c04e9-968b-40f2-b8b8-ee630ae52551" LastKnownName="修改性别" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="48d6c14a-c97b-4775-a406-2cb9f386c025" name="学生" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9fd7b362-0e2b-481b-88e2-50fc266a8e29" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="371de099-966a-45e9-9d29-888d4a17e886" name="头像处理" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="db4d2a8f-4e42-4fc3-b4e2-3874400e0969" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="83bb3319-eab9-4ad4-a7d2-179b1f436d11" />
+          </association>
+          <association Id="e71a754c-d01b-4718-8b9c-94bed5dd72b9" isDerived="false" sourceEndRoleName="用户" targetEndRoleName="修改性别1" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="be033112-ba65-4c68-8102-e6681db6dc79" LastKnownName="修改头像" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f021f295-1dd8-4ebe-b398-6e95703a05d8" name="用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="183a1830-417e-40b5-801a-8e35579eb915" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="264b65d7-ffd4-4aa3-8da4-f29ffb8c5eb3" name="修改性别1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a0656637-38e2-415f-b98b-bae482035339" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ba459927-30f5-4cfc-a49c-dcf80af4aedb" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1b9cdf5a-4c7e-4a48-aa2a-9f5a254c5246" name="查询资料" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b62624c9-b25f-4977-a331-99784d1ad434" />
+        <subjects>
+          <subsystemMoniker Id="736329f9-e9b0-45c8-98be-c654c0190a92" LastKnownName="." />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="736329f9-e9b0-45c8-98be-c654c0190a92" name="." isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="00db548d-8529-40e7-9fd3-6791747bc603" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="226e2085-6402-47a3-9e85-5d2802484f80" name="屏蔽用户发言" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f7a37647-d5a8-4465-8301-e0e9916000f6" />
+        <subjects>
+          <subsystemMoniker Id="736329f9-e9b0-45c8-98be-c654c0190a92" LastKnownName="." />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="0e579c9f-376b-4597-bd33-58ee8f44e941" name="查看聊天室状态" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="eeb7a68f-2d25-4681-aec7-3c4572338da3" />
+        <subjects>
+          <subsystemMoniker Id="736329f9-e9b0-45c8-98be-c654c0190a92" LastKnownName="." />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="9b373af2-ec3b-4f44-a8cb-abfef679bdc9" name="新建聊天室" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fc0f261c-0446-4364-a8da-8d6496a85833" />
+        <subjects>
+          <subsystemMoniker Id="736329f9-e9b0-45c8-98be-c654c0190a92" LastKnownName="." />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="38dbf9ee-07e8-4fb4-9b99-f793b794b967" name="管理员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8230db45-f259-468a-9a4d-25534690f650" />
+        <targetEnds>
+          <association Id="9d4129a0-1047-4c9a-8a55-c43235c7973a" isDerived="false" sourceEndRoleName="管理员" targetEndRoleName="查询学生基本信息" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1b9cdf5a-4c7e-4a48-aa2a-9f5a254c5246" LastKnownName="查询资料" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6570bb76-b940-4c36-af97-bf9775fc71cc" name="管理员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="19251961-cd78-4dcb-92e8-6bd3725e0a98" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dd97ea74-c0d4-4e5e-b361-6044ee457f4c" name="查询学生基本信息" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2342f6b0-e6f8-47a7-bb4a-2929a3065d86" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="30e69682-69f1-4e73-9ecb-4f02b14bbf8e" />
+          </association>
+          <association Id="e6e23298-5de2-4a6d-93e8-3c0fd6353ed8" isDerived="false" sourceEndRoleName="管理员" targetEndRoleName="修改学生基本信息1" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="226e2085-6402-47a3-9e85-5d2802484f80" LastKnownName="屏蔽用户发言" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="80f37683-5f9a-4203-b08a-1c92b82839bc" name="管理员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e44b55b6-12b5-4ef7-bfeb-8527a186d08c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0e62f207-094d-4142-a893-1b7fa1e5c6b2" name="修改学生基本信息1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bc1197b6-76b5-4b03-bdb3-2042be948dd0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0ec8ee46-22db-453f-99ac-ef1d669d82f5" />
+          </association>
+          <association Id="1f29eec1-ab6d-4f14-8ebd-37b9d5d49c5d" isDerived="false" sourceEndRoleName="管理员" targetEndRoleName="增加学生基本信息2" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0e579c9f-376b-4597-bd33-58ee8f44e941" LastKnownName="查看聊天室状态" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="22e0d1d1-363b-40c7-8644-6438f9c0e9f0" name="管理员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="85ccffdc-3946-474b-bb0b-1e45dd090656" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c0906039-9e56-48de-b913-a76c8679f3a2" name="增加学生基本信息2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="88fbb356-0d6a-48f0-9475-32c64e63021a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="41af0991-ceec-47b2-af1f-aad167861a2d" />
+          </association>
+          <association Id="a4982ea7-faed-4df6-a543-f24d62e4c20f" isDerived="false" sourceEndRoleName="管理员" targetEndRoleName="删除学生基本信息3" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9b373af2-ec3b-4f44-a8cb-abfef679bdc9" LastKnownName="新建聊天室" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="019358b1-3edb-4ced-9b7a-489ff1501cd0" name="管理员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="68eacd13-ea25-445a-80f4-b2976f8257ba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="44addf86-101c-4ca3-89c3-70c2b1b8e759" name="删除学生基本信息3" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9d704ba9-da79-476a-9702-860c3e90ff36" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4ab5c4c7-3943-4775-8208-d07265a4e89d" />
+          </association>
+          <association Id="98762539-08ee-4c77-95d7-baae49533a7c" isDerived="false" sourceEndRoleName="管理员" targetEndRoleName="批假/销假" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="755a4f4d-f4b1-4a31-ae4f-0afa1e9ddc0b" LastKnownName="过滤敏感词汇" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="887cd00e-142a-4dba-b0fd-db77506ac283" name="管理员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cff191c8-7cab-4c70-bbb9-61e6b12a544c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f9231bb8-f4ff-493d-82f0-b1cf6f8cdfa3" name="批假/销假" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="37d733ff-3cb3-4155-9d40-4b2c8b1f1aee" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="730eb8f8-cf9c-453d-a90f-ae628fb46f1d" />
+          </association>
+          <association Id="29b62aa1-70c3-4864-8cb1-25d4b794db9a" isDerived="false" sourceEndRoleName="管理员" targetEndRoleName="删除聊天室" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="edd89f22-3dfd-4e83-800b-31ed8f6a8a53" LastKnownName="删除聊天室" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a72fea65-8d86-4f24-ab09-bfce06655d2d" name="管理员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="86335479-4172-4a9e-be1d-0c6f44265051" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="54a092d3-363e-493a-9cdc-7f80e82d9449" name="删除聊天室" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="feca6534-c800-4d6d-a086-0c98f9658b34" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2ebaad28-407e-4362-b7dd-12910b51225b" />
+          </association>
+          <association Id="a8b58e14-6634-47b2-9356-1d36605165e3" isDerived="false" sourceEndRoleName="管理员" targetEndRoleName="设置聊天室公告" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="35d8e32c-0d39-4549-85a4-97f3a204cf47" LastKnownName="设置聊天室公告" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fd4f8e15-09ba-40ff-b5ea-8700f359bb4b" name="管理员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="aed95ef6-f424-4e93-91ab-07e7b5fd911a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cf94efde-2284-42fb-b209-4f40278031c4" name="设置聊天室公告" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="365f91c1-cb22-4511-b68a-d19ff13d3ebe" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="cd255316-8a70-4167-b077-2ac5ee833509" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="755a4f4d-f4b1-4a31-ae4f-0afa1e9ddc0b" name="过滤敏感词汇" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="74287c17-be1a-40f0-9dd6-6ba876f3c8ba" />
+        <subjects>
+          <subsystemMoniker Id="736329f9-e9b0-45c8-98be-c654c0190a92" LastKnownName="." />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="9b9f3621-ddf4-45f8-8f82-307233aa3702" name="修改密码" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="49b582c6-460e-492a-8e3e-315a4c11a555" />
+        <subjects>
+          <subsystemMoniker Id="736329f9-e9b0-45c8-98be-c654c0190a92" LastKnownName="." />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="d69abd7e-e69e-4d45-bf57-99d7e277d95a" name="修改邮箱" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="631a1784-84eb-4ffc-a4a7-b2403b926e72" />
+        <subjects>
+          <subsystemMoniker Id="736329f9-e9b0-45c8-98be-c654c0190a92" LastKnownName="." />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="fd4c04e9-968b-40f2-b8b8-ee630ae52551" name="修改性别" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8e6b7568-48b5-4ea0-bc65-8fd091dae4b5" />
+        <subjects>
+          <subsystemMoniker Id="736329f9-e9b0-45c8-98be-c654c0190a92" LastKnownName="." />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="be033112-ba65-4c68-8102-e6681db6dc79" name="修改头像" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3bef74e9-0a1e-4726-a789-f80b0ce1867b" />
+        <subjects>
+          <subsystemMoniker Id="736329f9-e9b0-45c8-98be-c654c0190a92" LastKnownName="." />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="edd89f22-3dfd-4e83-800b-31ed8f6a8a53" name="删除聊天室" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c272b2bf-1dce-4b4a-8b43-efecf81a8aa8" />
+        <subjects>
+          <subsystemMoniker Id="736329f9-e9b0-45c8-98be-c654c0190a92" LastKnownName="." />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="35d8e32c-0d39-4549-85a4-97f3a204cf47" name="设置聊天室公告" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="11584da7-f7e5-4b55-94c3-f2b62d95c23c" />
+        <subjects>
+          <subsystemMoniker Id="736329f9-e9b0-45c8-98be-c654c0190a92" LastKnownName="." />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="7822f760-1041-4321-ae07-6dbe85b0fc57" name="ModelingProject1">
+    <elementDefinition Id="eae8e7bd-5d9b-466e-b502-8ef0da51658d" />
+    <profileInstances>
+      <packageHasProfileInstances Id="15d09900-43c1-4b10-b575-d5332cf15f41">
+        <profileInstance Id="d6199a41-3ee0-4d79-b2dc-471c3b530304" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="8ff80819-40b6-485e-b913-5715b746982e">
+        <profileInstance Id="42e74745-3a21-4f4a-abf7-01297983b3b9" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

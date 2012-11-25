@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="7f8fa254-1883-4005-901c-a214518bd728" name="Activity1" linkedPackageId="ff7f150f-995e-4fec-8541-94ecebcd4063" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="67db1f0d-9f19-4a96-bb46-dfbb75b2e69f" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="1c4e9879-6bfe-4a9b-89bd-1bf7fdc7ae49" />
+        <nodes>
+          <objectNode Id="157ce688-68cd-4b01-8460-0287695f3f08" name="用户" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="b0fea171-405e-4f73-84fc-1d392271f1b0" />
+            <upperBound>
+              <literalInteger Id="b1673ad9-d88d-4d65-8e1d-235c4de4c71b" name="2147483647" value="2147483647">
+                <elementDefinition Id="7e02906d-1232-4fbf-b452-b9696cbad03e" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="a2965657-98c0-47d7-a3ac-2d76d2e751f8" name="管理员" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="dd3aea9c-af76-4f8a-a155-91ac60579293" />
+            <upperBound>
+              <literalInteger Id="444330cf-5e46-4ba0-a85a-7fd48a3ddcca" name="2147483647" value="2147483647">
+                <elementDefinition Id="09fda7d6-566d-4b1f-ac65-02d739e252c9" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="99f4968f-419f-415d-b51a-0a6df1390dd0" name="发送聊天信息" isLeaf="false">
+            <elementDefinition Id="9693d0e5-48f1-40a8-876d-5daa0220fd09" />
+            <flowNodeTargets>
+              <controlFlow Id="e390525a-41e5-46e9-999b-854d8d2fbac9" isLeaf="false">
+                <activityFinalNodeMoniker Id="ac633748-37ff-4810-afdc-bc9be440acc1" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="2cd9b0be-c6a8-4d55-9987-9738c5fd7e39" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="a0736613-4ced-4902-a845-975647ec8e07" name="获取用户信息" isLeaf="false">
+            <elementDefinition Id="79a002c9-e8f6-4d7d-a33b-1ce810da225f" />
+            <flowNodeTargets>
+              <controlFlow Id="9ff237f6-e0af-438e-91b3-7755e787d810" isLeaf="false">
+                <activityFinalNodeMoniker Id="ac633748-37ff-4810-afdc-bc9be440acc1" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="fc9319cf-d93a-4636-a457-ce78da43b5fe" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="06007239-2a95-479d-a230-13538660ff17" name="添加好友" isLeaf="false">
+            <elementDefinition Id="a90f5186-86da-416d-9697-374c16e6c535" />
+            <flowNodeTargets>
+              <controlFlow Id="2088b1c4-4268-45a1-9c1a-e90384884e49" isLeaf="false">
+                <activityFinalNodeMoniker Id="ac633748-37ff-4810-afdc-bc9be440acc1" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="14ccca4e-85c9-48a0-9067-576d3e9a2627" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="063fdab4-eff7-4825-97c7-cf2b93cb3532" name="查看资料" isLeaf="false">
+            <elementDefinition Id="71d07b7c-0c7a-4b98-8f25-a23939e41aa4" />
+            <flowNodeTargets>
+              <controlFlow Id="abae7589-b2b4-4ae0-a07c-0613f4483696" isLeaf="false">
+                <activityFinalNodeMoniker Id="ac633748-37ff-4810-afdc-bc9be440acc1" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="42603757-5229-44ff-a200-79520c0f0821" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <initialNode Id="06dc0342-c226-4b08-a620-2161afeba1ee" name="Initial1" isLeaf="false">
+            <elementDefinition Id="8d6f8cf8-3afb-4a8c-8b53-37213348b5bd" />
+            <flowNodeTargets>
+              <controlFlow Id="b25edf63-77a7-4617-8a72-fa7bfa1c79bc" isLeaf="false">
+                <opaqueActionMoniker Id="063fdab4-eff7-4825-97c7-cf2b93cb3532" LastKnownName="查看资料" />
+                <elementDefinition Id="8ac36b95-93c7-4f15-b5a5-e37a07645079" />
+              </controlFlow>
+              <controlFlow Id="976fcbe5-6128-4213-9dc3-1f1fbcf4ad76" isLeaf="false">
+                <opaqueActionMoniker Id="988ff7c6-a758-4f4e-8d18-2c51bdd30718" LastKnownName="屏蔽用户发言" />
+                <elementDefinition Id="4b884a65-770c-4970-914a-0d085aea6917" />
+              </controlFlow>
+              <controlFlow Id="dfe43e66-f7f6-4d06-90ea-298c571ce308" isLeaf="false">
+                <opaqueActionMoniker Id="62e6606d-8879-47f6-bebe-bba0f1ee26bf" LastKnownName="新建聊天室" />
+                <elementDefinition Id="98305469-c2de-42ef-9e12-ff66aec4ad9d" />
+              </controlFlow>
+              <controlFlow Id="bbb78326-3032-4a7c-ad32-4f920591b4b2" isLeaf="false">
+                <opaqueActionMoniker Id="1cc39a08-c6c9-420e-aaa6-b52d4934b738" LastKnownName="删除聊天室" />
+                <elementDefinition Id="ce5dd646-e7e8-447d-b686-083af5cbbdf1" />
+              </controlFlow>
+              <controlFlow Id="4c4cdadb-2b02-4066-8e0a-f56b703ff8ea" isLeaf="false">
+                <opaqueActionMoniker Id="d954ec47-29db-4196-a19c-c177d3991573" LastKnownName="设置聊天室公告" />
+                <elementDefinition Id="5901291c-72b5-4f3c-9375-cadf14e95b60" />
+              </controlFlow>
+              <controlFlow Id="d3d754c7-4377-41a8-8f1a-532cc98dada9" isLeaf="false">
+                <opaqueActionMoniker Id="9a4ba3bb-fb1b-40f1-9c3c-c0a6aa8d5824" LastKnownName="查看聊天室账号" />
+                <elementDefinition Id="e72ba227-eec0-4fdd-9323-ebdc4823655b" />
+              </controlFlow>
+              <controlFlow Id="10374cdd-bc8f-4a2e-9aef-088f07b49c9d" isLeaf="false">
+                <opaqueActionMoniker Id="86abdd31-7871-4d26-aa81-44ceb1d6d2c7" LastKnownName="过滤敏感词汇" />
+                <elementDefinition Id="d0fa7891-19b1-4c3f-bcfc-643ee2a5df31" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <initialNode Id="85e8cb1c-d34c-476a-b4ee-d73c1db4ba29" name="Initial2" isLeaf="false">
+            <elementDefinition Id="63004a1d-66ab-4067-bb29-def699e17346" />
+            <flowNodeTargets>
+              <controlFlow Id="95b69f7d-e2ea-4777-917b-a040d34bd550" isLeaf="false">
+                <opaqueActionMoniker Id="063fdab4-eff7-4825-97c7-cf2b93cb3532" LastKnownName="查看资料" />
+                <elementDefinition Id="6ce0e2d9-ac68-403b-a353-7e8483d24359" />
+              </controlFlow>
+              <controlFlow Id="754439de-5874-44f6-bc36-01ca4d1ae29a" isLeaf="false">
+                <opaqueActionMoniker Id="06007239-2a95-479d-a230-13538660ff17" LastKnownName="添加好友" />
+                <elementDefinition Id="2438b444-df27-465a-841b-2cee10a56f43" />
+              </controlFlow>
+              <controlFlow Id="ec3477db-a623-48b2-a882-2f19a5c1f93d" isLeaf="false">
+                <opaqueActionMoniker Id="a0736613-4ced-4902-a845-975647ec8e07" LastKnownName="获取用户信息" />
+                <elementDefinition Id="2a3bf2e4-a6f5-43b7-a686-1bee513f5b97" />
+              </controlFlow>
+              <controlFlow Id="2048c6e5-2d35-4a4a-8fd9-991405ebb19d" isLeaf="false">
+                <opaqueActionMoniker Id="99f4968f-419f-415d-b51a-0a6df1390dd0" LastKnownName="发送聊天信息" />
+                <elementDefinition Id="cf9eaca8-621d-441b-b277-9b963321839e" />
+              </controlFlow>
+              <controlFlow Id="d35c2cdf-037a-4423-b73c-ffc2538b4f49" isLeaf="false">
+                <opaqueActionMoniker Id="e4ea5d0f-5d84-4aae-b934-f99cc026b4dd" LastKnownName="进行私聊" />
+                <elementDefinition Id="6e54d293-3bc4-48f2-a8ae-a0b9db5a5bc5" />
+              </controlFlow>
+              <controlFlow Id="5f3f9895-c6c2-49c9-b6f3-eba2076d0d2a" isLeaf="false">
+                <opaqueActionMoniker Id="6b6d64d3-a03d-4116-a21e-f326aff7ddfd" LastKnownName="保存聊天记录" />
+                <elementDefinition Id="c3a0fde6-e615-4e3a-b90b-ec203f31f8fe" />
+              </controlFlow>
+              <controlFlow Id="d74ed0aa-b7b7-4685-85d6-5e2a40a12408" isLeaf="false">
+                <opaqueActionMoniker Id="792d5f96-c2d9-48dd-b9c2-6e56679401c2" LastKnownName="退出登录" />
+                <elementDefinition Id="89b01fc7-e38b-4c48-b7d3-05856b5bb063" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="988ff7c6-a758-4f4e-8d18-2c51bdd30718" name="屏蔽用户发言" isLeaf="false">
+            <elementDefinition Id="bc9cd997-a997-4d85-82f9-1bf704ee6cf7" />
+            <flowNodeTargets>
+              <controlFlow Id="923a3bdf-18ef-4671-ac05-2c736fe74a9b" isLeaf="false">
+                <activityFinalNodeMoniker Id="ac633748-37ff-4810-afdc-bc9be440acc1" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="58aef5cc-7848-41ae-b919-0e0cb8431534" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="62e6606d-8879-47f6-bebe-bba0f1ee26bf" name="新建聊天室" isLeaf="false">
+            <elementDefinition Id="a8f01e25-2d5e-4442-a1aa-8d02c16e8599" />
+            <flowNodeTargets>
+              <controlFlow Id="5018cc38-b5ee-406f-bf1a-180b966e657f" isLeaf="false">
+                <activityFinalNodeMoniker Id="ac633748-37ff-4810-afdc-bc9be440acc1" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="bff8aede-6ad4-474a-8df1-0b076a95c939" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="ac633748-37ff-4810-afdc-bc9be440acc1" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="b223e1ca-6bbe-42ef-9230-40b57e2d50f0" />
+          </activityFinalNode>
+          <opaqueAction Id="e4ea5d0f-5d84-4aae-b934-f99cc026b4dd" name="进行私聊" isLeaf="false">
+            <elementDefinition Id="fd5e6fa8-956f-4edc-b14e-b11c8b4da815" />
+            <flowNodeTargets>
+              <controlFlow Id="dd32d5a4-bfc7-4e83-9406-4c101f6365a8" isLeaf="false">
+                <activityFinalNodeMoniker Id="ac633748-37ff-4810-afdc-bc9be440acc1" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="89b6ef2d-ef1c-41e9-84bc-0f64c6961647" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="6b6d64d3-a03d-4116-a21e-f326aff7ddfd" name="保存聊天记录" isLeaf="false">
+            <elementDefinition Id="3d2f7341-0ff1-413d-ae4a-ae2fb30ab8a0" />
+            <flowNodeTargets>
+              <controlFlow Id="37c40004-6cff-484a-8e6a-9ffc21a6e70f" isLeaf="false">
+                <activityFinalNodeMoniker Id="ac633748-37ff-4810-afdc-bc9be440acc1" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="ed54f5fd-1a89-4ffd-959e-c5a208508329" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="792d5f96-c2d9-48dd-b9c2-6e56679401c2" name="退出登录" isLeaf="false">
+            <elementDefinition Id="2f63af8e-b321-49cf-85cb-0e467787e7dd" />
+            <flowNodeTargets>
+              <controlFlow Id="bc0f64ec-f208-4018-a83f-138fcf414812" isLeaf="false">
+                <activityFinalNodeMoniker Id="ac633748-37ff-4810-afdc-bc9be440acc1" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="dedcd6e6-e27f-4106-9ef7-646ccd47b751" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="1cc39a08-c6c9-420e-aaa6-b52d4934b738" name="删除聊天室" isLeaf="false">
+            <elementDefinition Id="69c7c5a5-0833-4dde-bfee-a74ee956d97f" />
+            <flowNodeTargets>
+              <controlFlow Id="5031b6f9-caaf-45d1-bc7f-3e9e59098c08" isLeaf="false">
+                <activityFinalNodeMoniker Id="ac633748-37ff-4810-afdc-bc9be440acc1" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="e9a40ae9-69be-4bbf-a8b0-43c656089553" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="86abdd31-7871-4d26-aa81-44ceb1d6d2c7" name="过滤敏感词汇" isLeaf="false">
+            <elementDefinition Id="a947dfde-a876-45fc-93a7-9faccd826b70" />
+            <flowNodeTargets>
+              <controlFlow Id="e86ccb9e-02a1-4ba4-accb-f1fe5b601c7d" isLeaf="false">
+                <activityFinalNodeMoniker Id="ac633748-37ff-4810-afdc-bc9be440acc1" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="7e0f6204-7a9c-4b39-a433-138e131023f4" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="d954ec47-29db-4196-a19c-c177d3991573" name="设置聊天室公告" isLeaf="false">
+            <elementDefinition Id="f2d4dccf-9081-494b-9505-3ff011c0380f" />
+            <flowNodeTargets>
+              <controlFlow Id="1a619c1c-8650-4a73-9893-92fad6f1eb2a" isLeaf="false">
+                <activityFinalNodeMoniker Id="ac633748-37ff-4810-afdc-bc9be440acc1" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="39332d86-be30-4df9-88a8-526d54001963" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="9a4ba3bb-fb1b-40f1-9c3c-c0a6aa8d5824" name="查看聊天室账号" isLeaf="false">
+            <elementDefinition Id="7e030880-03fa-4498-b6ec-3b781624495e" />
+            <flowNodeTargets>
+              <controlFlow Id="d6b02af9-7e56-42de-a188-20c7c56c0712" isLeaf="false">
+                <activityFinalNodeMoniker Id="ac633748-37ff-4810-afdc-bc9be440acc1" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="731be33c-a786-402a-9e4a-48da55cdda39" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="ff7f150f-995e-4fec-8541-94ecebcd4063" name="ModelingProject1">
+    <elementDefinition Id="eae8e7bd-5d9b-466e-b502-8ef0da51658d" />
+    <profileInstances>
+      <packageHasProfileInstances Id="a76c0a21-5603-4a50-a151-445d2b76b8e1">
+        <profileInstance Id="f7899843-1f1e-4b82-843f-609ffba11e3d" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="32a78b46-e414-4c8c-9908-51bbbb3fc3e1">
+        <profileInstance Id="a1c25f9f-abea-412b-8a05-7fa7020822b9" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>
