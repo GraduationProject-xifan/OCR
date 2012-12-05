@@ -1,6 +1,6 @@
-create table myuser(uid int identity(1001,1) primary key,uname varchar(32),passwd varchar(32),umail varchar(60),utype int)
+create table myuser(uid int identity(1001,1) primary key,uname varchar(32),passwd varchar(32),umail varchar(60),utype int,status int)
 create table myinfo(uid int primary key,uinfo varchar(60),sex varchar(2),avator ntext)
-create table croom(rid int identity(1,1) primary key,r_owner int)
+create table croom(rid int identity(1,1) primary key,r_owner int,r_count int)
 create table myfrd(uid int primary key,fid int)
 go
-insert into myuser values('admin','123','test@t.com','3')
+insert into myuser values('admin','123','test@t.com','3','0')

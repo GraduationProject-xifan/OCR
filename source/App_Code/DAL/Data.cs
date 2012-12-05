@@ -10,36 +10,24 @@ using System.Configuration;
 /// </summary>
 public class Data
 {
-    SqlConnection Conn = new SqlConnection();
-
+    private string connstr;
 	public Data()
 	{
-        Conn.ConnectionString = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString.ToString();
+        connstr = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString.ToString();
 	}
 
     public DataSet ReadDB(string cmd, string tablename)
     {
-        using (Conn)
+        using (SqlConnection Conn = new SqlConnection(connstr))
         {
+            string a = Conn.State.ToString();
             DataSet ds = new DataSet();
             SqlDataAdapter da = new SqlDataAdapter(cmd, Conn);
             da.Fill(ds, tablename);
             return ds;
+            
         }
     }
 
-    #region 过滤字符
-    public string FilterStr(string Str)
-    {
-        Str = Str.Trim();
-        Str = Str.Replace("*", "");
-        Str = Str.Replace("=", "");
-        Str = Str.Replace("/", "");
-        Str = Str.Replace("$", "");
-        Str = Str.Replace("#", "");
-        Str = Str.Replace("@", "");
-        Str = Str.Replace("&", "");
-        return Str;
-    }
-    #endregion
+    
 }
