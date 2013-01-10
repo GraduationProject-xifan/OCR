@@ -1,16 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 using System.Web;
 
 /// <summary>
-/// UserBLL 的摘要说明
+/// 用户层
 /// </summary>
 public class UserBLL
 {
     private string tablename = "";
     Data mydata = new Data();
+
 	public UserBLL()
 	{
 		//
@@ -18,29 +18,203 @@ public class UserBLL
 		//
 	}
 
+    /// <summary>
+    /// 执行注册
+    /// </summary>
+    /// <param name="uname">用户名</param>
+    /// <param name="upwd">密码</param>
+    /// <param name="email">邮箱</param>
+    /// <param name="isvip">vip为1，非vip为0，游客为2</param>
+    /// <returns>是否成功</returns>
+    public bool SignUp(string uname,string upwd,string email,int isvip)
+    {
+        uname=FilterStr(uname);
+        string cmd = string.Format("insert into myuser values(N'{0}','{1}','{2}',{3},0)", uname, FilterStr(upwd), FilterStr(email), isvip);
+        if (mydata.ExcCmd(cmd) > 0)
+        {
+            string newid = CheckLogin(uname);
+            string cmd1 = string.Format("update myuser set uname=N'{0}' where uid={1}", uname, Convert.ToInt32(newid));
+            mydata.ExcCmd(cmd1);//再次插值防止乱码
+            return true;
+        }
+            
+        else
+            return false;
+    }
+
+    /// <summary>
+    /// 进入聊天室更新数据
+    /// </summary>
+    /// <param name="rid">聊天室id</param>
+    /// <param name="uid">用户id</param>
+    /// <param name="r_count">聊天室人数</param>
+    /// <returns>true为成功，false为失败</returns>
+    public bool EnterRoom(int rid,int uid,int r_count)
+    {
+        if (r_count < 50)
+            r_count += 1;
+        else
+            return false;
+        string cmd = string.Format("update croom set r_count={0} where rid={1}", r_count, rid);
+        string cmd1 = string.Format("update myuser set status={0} where uid={1}", rid, uid);
+        int test = 0;
+        test=mydata.ExcCmd(cmd);
+        test += mydata.ExcCmd(cmd1);
+        if (test > 1)
+            return true;//如果两条命令都执行成功，则返回true
+        else
+            return false;//否则返回false
+    }
+
+    /// <summary>
+    /// 游客通道，进入聊天室更新数据
+    /// </summary>
+    /// <param name="rid">聊天室id</param>
+    /// <param name="r_count">聊天室人数</param>
+    /// <returns>true为成功，false为失败</returns>
+    public bool EnterRoom(int rid, int r_count)
+    {
+        if (r_count < 50)
+            r_count += 1;
+        else
+            return false;
+        string cmd = string.Format("update croom set r_count={0} where rid={1}", r_count, rid);
+        if (mydata.ExcCmd(cmd) > 0)
+            return true;//如果两条命令都执行成功，则返回true
+        else
+            return false;//否则返回false
+    }
+
+    public int GetRoomCount(string roomid)
+    {
+        string cmd = string.Format("select r_count from croom where rid={0}",Convert.ToInt32(roomid));
+        SqlDataReader dr = mydata.ReadDB(cmd);
+        if (dr.Read())
+        {
+            int rcount = Convert.ToInt32(dr["r_count"]);
+            dr.Close();
+            return rcount;
+        }
+        else
+            return -1;
+    }
+
+    public SqlDataReader GetUserList(string rid)
+    {
+        string cmd = string.Format("select uid from myuser where status={0}", rid);
+        SqlDataReader reader = mydata.ReadDB(cmd);
+            return reader;
+    }
+
+    /// <summary>
+    /// 清除当前用户状态
+    /// </summary>
+    /// <param name="rid"></param>
+    /// <param name="uid"></param>
+    /// <returns></returns>
+    public bool ClearList(string rid,string uid)
+    {
+        int rcount=GetRoomCount(rid);
+        if (rcount > 0)
+            rcount -= 1;
+        else
+            return false;
+        string cmd = string.Format("update croom set r_count={0} where rid={1}", rcount, Convert.ToInt32(rid));
+        string cmd1 = string.Format("update myuser set status=0 where uid={0}", Convert.ToInt32(uid));
+        int test = 0;
+        test = mydata.ExcCmd(cmd);
+        test += mydata.ExcCmd(cmd1);
+        if (test>1)
+            return true;
+        else
+            return false;
+    }
+
+    /// <summary>
+    /// 清除游客状态
+    /// </summary>
+    /// <param name="rid"></param>
+    /// <returns></returns>
+    public bool ClearList(string rid)
+    {
+        int rcount = GetRoomCount(rid);
+        if (rcount > 0)
+            rcount -= 1;
+        else
+            return false;
+        string cmd = string.Format("update croom set r_count={0} where rid={1}", rcount, Convert.ToInt32(rid));
+        if (mydata.ExcCmd(cmd) > 1)
+            return true;
+        else
+            return false;
+    }
+
+    public UserModel GetUserInfo(string uid)
+    {
+        UserModel info = new UserModel();
+        string cmd = string.Format("select * from myuser where uid={0}", Convert.ToInt32(uid));
+        SqlDataReader dr = mydata.ReadDB(cmd);
+        if (dr.Read())
+        {
+            info.uname = dr["uname"].ToString();
+            info.upwd = dr["passwd"].ToString();
+            info.email = dr["umail"].ToString();
+            info.utype = dr["utype"].ToString();
+            info.status = dr["status"].ToString();
+        }
+        info.uid = uid;
+        dr.Close();
+        string cmd2 = string.Format("select * from myinfo where uid={0}", Convert.ToInt32(uid));
+        SqlDataReader dr2 = mydata.ReadDB(cmd2);
+        if (dr2.Read())
+        {
+            info.uinfo = dr2["uinfo"].ToString();
+            info.sex = dr2["sex"].ToString();
+            info.avatorurl = dr2["avator"].ToString();
+        }
+        else
+        {
+            info.uinfo = "";
+            info.sex = "";
+            info.avatorurl = "";
+        }
+        dr2.Close();
+        return info;
+    }
+
     #region 检查用户名密码是否存在并验证
     /// <summary>
     /// 检查用户名或者用户名与密码是否存在并对其进行验证
     /// </summary>
     /// <param name="uname">用户名字符串</param>
     /// <param name="upwd">密码字符串</param>
-    /// <returns></returns>
-    public bool CheckLogin(string uname, string upwd)
+    /// <returns>返回用户id</returns>
+    public string CheckLogin(string uname, string upwd)
     {
         tablename = "myuser";      //当前方法对myuser表进行操作
-        DataSet ds = new DataSet();
-        ds = mydata.ReadDB(string.Format("select uid from {0} where uname='{1}' and passwd='{2}'", tablename, FilterStr(uname), FilterStr(upwd)), tablename);
-        try
+        SqlDataReader dr = mydata.ReadDB(string.Format("select uid from {0} where uname=N'{1}' and passwd='{2}'", tablename, FilterStr(uname), FilterStr(upwd)));
+        if (dr.Read())
         {
-            if (ds.Tables[tablename].Rows[0]["uid"].ToString() != "")
-                return true;
+            if (dr["uid"].ToString() != "")
+            {
+                string uid = dr["uid"].ToString();
+                dr.Close();
+                return uid;
+            }
+
             else
-                return false;
+            {
+                dr.Close();
+                return "null";
+            }
+                
         }
-        catch
+        else
         {
-            return false;
+            dr.Close();
+            return "null";
         }
+        
         
     }
 
@@ -48,22 +222,31 @@ public class UserBLL
     /// 检查用户名是否存在
     /// </summary>
     /// <param name="uname">用户名字符串</param>
-    /// <returns>true为存在</returns>
-    public bool CheckLogin(string uname)
+    /// <returns>返回用户id</returns>
+    public string CheckLogin(string uname)
     {
         tablename = "myuser";      //当前方法对myuser表进行操作
-        DataSet ds = new DataSet();
-        ds = mydata.ReadDB(string.Format(@"select uid from {0} where uname='{1}'", tablename, FilterStr(uname)), tablename);
-        try
+        SqlDataReader dr = mydata.ReadDB(string.Format("select uid from {0} where uname=N'{1}'", tablename, FilterStr(uname)));
+        if (dr.Read())
         {
-            if (ds != null && ds.Tables[tablename].Rows[0]["uid"].ToString() != "")
-                return true;
+            if (dr["uid"].ToString() != "")
+            {
+                string uid = dr["uid"].ToString();
+                dr.Close();
+                return uid;//用户名已存在
+            }
+
             else
-                return false;
+            {
+                dr.Close();
+                return "null";//用户名不存在
+            }
+
         }
-        catch
+        else
         {
-            return false;
+            dr.Close();
+            return "null";
         }
         
     }
@@ -131,4 +314,51 @@ public class UserBLL
         return Str;
     }
     #endregion
+
+    public string GetAnnounce(string rid)
+    {
+        string cmd = "select r_announce from croom where rid=" + Convert.ToInt32(rid);
+        SqlDataReader dr = mydata.ReadDB(cmd);
+        string an = "";
+        if (dr.Read())
+            an = dr["r_announce"].ToString();
+        else
+            an = "";
+        dr.Close();
+        return an;
+    }
+
+
+    public bool CheckFrd(string me, string friend)
+    {
+        string cmd = "select fid from myfrd where uid=" + Convert.ToInt32(me);
+        SqlDataReader dr = mydata.ReadDB(cmd);
+        if (dr.Read())
+        {
+            if (dr["fid"].ToString() == friend)
+            {
+                dr.Close();
+                return true;
+            }
+            else
+            {
+                dr.Close();
+                return false;
+            }
+        }
+        else
+        {
+            dr.Close();
+            return false;
+        }
+    }
+
+    public bool AddFriend(string me, string frd)
+    {
+        string cmd = string.Format("insert into myfrd values({0},{1})", Convert.ToInt32(me), Convert.ToInt32(frd));
+        if (mydata.ExcCmd(cmd) > 0)
+            return true;
+        else
+            return false;
+    }
 }

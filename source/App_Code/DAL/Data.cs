@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using System.Configuration;
+using System.Data;
 
 /// <summary>
 /// Data 的摘要说明
@@ -16,16 +13,22 @@ public class Data
         connstr = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString.ToString();
 	}
 
-    public DataSet ReadDB(string cmd, string tablename)
+    public SqlDataReader ReadDB(string cmd)
     {
-        using (SqlConnection Conn = new SqlConnection(connstr))
+        SqlConnection Conn = new SqlConnection(connstr);
+        Conn.Open();
+        SqlCommand sqlcmd = new SqlCommand(cmd, Conn);
+        SqlDataReader dr = sqlcmd.ExecuteReader(CommandBehavior.CloseConnection);
+        return dr;
+    }
+
+    public int ExcCmd(string cmd)
+    {
+        using (SqlConnection Conn=new SqlConnection(connstr))
         {
-            string a = Conn.State.ToString();
-            DataSet ds = new DataSet();
-            SqlDataAdapter da = new SqlDataAdapter(cmd, Conn);
-            da.Fill(ds, tablename);
-            return ds;
-            
+            Conn.Open();
+            SqlCommand sqlcmd = new SqlCommand(cmd, Conn);
+            return sqlcmd.ExecuteNonQuery();
         }
     }
 
